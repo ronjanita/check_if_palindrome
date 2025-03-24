@@ -7,18 +7,16 @@
         int i = 0;
         int j = userInput.Length - 1;
 
-        for (i = 0; i < j;)
+        while (i < j)
         {
-            if (userInput[i] == j)
-            {
-                i++;
-                j -= 1;
-            }
-            else
+            if (userInput[i] != userInput[j])
             {
                 Console.WriteLine("your entered word isn't a palindrome.");
+                return;
             }
+            i++;
+            j-= 1;
         }
-        Console.WriteLine("your word is a palindrome!");
+        Console.WriteLine("The entered word is a palindrome!");
     }
 }
